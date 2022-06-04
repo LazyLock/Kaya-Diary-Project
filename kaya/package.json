@@ -1,0 +1,18 @@
+{
+  "name": "kaya",
+  "version": "0.0.1",
+  "description": "kaya diary project",
+  "main": "app.js",
+  "scripts": {
+    "start" : "nodemon app"
+  },
+  "author": "groovy",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.1",
+    "nunjucks": "^3.2.3"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.16"
+  }
+}
