@@ -5,6 +5,7 @@
   <meta charset="utf-8">
   <title>Kaya</title>
   <link rel="stylesheet" href="/main2.css">
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 </head>
 
 <body>
@@ -16,14 +17,22 @@
     <div id="modal" class="modal-overlay">
       <div class="modal-window">
         <div class="title">
-          <h2>모달</h2>
+          <h2>다이어리 작성하기</h2>
         </div>
         <div class="close-area">X</div>
         <div class="content">
-          <p>가나다라마바사 아자차카타파하</p>
-          <p>가나다라마바사 아자차카타파하</p>
-          <p>가나다라마바사 아자차카타파하</p>
-          <p>가나다라마바사 아자차카타파하</p>
+          <form action="/diary" method="post" id="diary-form">
+            <header id="diary-header">
+              <input type="date" id="diary-date" name="date" placeholder="날짜를 입력하세요">
+              <input type="text" id="diary-category" name="catego" placeholder="카테고리를 입력하세요">
+            </header>
+            <section id="diary-section">
+              <input type="text" id="diary-friends" name="friend" placeholder="같이 방문한 사람을 입력하세요">
+              <input type="text" id="diary-title" name="title" placeholder="제목을 입력해주세요">
+              <input type="text" id="diary-comment" name="comment" placeholder="코멘트를 남겨주세요">
+            </section>
+            <button id="diary-btn" type="submit">제출하기</button>
+          </form>
 
         </div>
       </div>
@@ -44,6 +53,12 @@
         <button class="sort_location">지역별</button>
         <button class="sort_date">날짜별</button>
         <article class="diary_list">다이어리 목록</article>
+        {% for diary in diarys %}
+          <div id="diary-list">
+            <span>{{diary.date}}</span>
+            <span>{{diary.title}}</span>
+          </div>
+        {% endfor %}
       </section>
     </section>
     <footer id="jb-footer">
@@ -53,6 +68,9 @@
   <script type="text/javascript"
     src="//dapi.kakao.com/v2/maps/sdk.js?appkey=9d2920e9898e2a4a8c8002ee3cd2ac29&libraries=services"></script>
   <script src="/main.js"></script>
+  <script>
+
+  </script>
 </body>
 
 </html>

@@ -86,6 +86,33 @@ html {
   color: white;
 }
 
+#diary-form {
+  border: solid 1px gray;
+  padding: 10px;
+}
+
+#diary-header {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 10px;
+}
+
+#diary-section {
+  display: box;
+  margin: auto;
+}
+
+#diary-friends {
+  width: 350px;
+  margin-bottom: 10px;
+}
+
+#diary-comment {
+  width: 350px;
+  height: 250px;
+  margin-bottom: 10px;
+}
+
 .map_search {
   padding-left: 15px;
   margin-top: 5px;
