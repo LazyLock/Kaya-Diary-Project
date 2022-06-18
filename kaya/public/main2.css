@@ -1,0 +1,129 @@
+:root {
+  --font-size-large: 20px;
+  --font-size-middle: 16px;
+  --font-size-small: 12px;
+
+  --color-main: #00251a;
+  --color-map: #39796b;
+  --colot-diary: #004d40;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+html {
+  height: 100%;
+}
+
+
+#jb-container {
+  width: 940px;
+  margin: 0px auto;
+  margin-top: 10px;
+  padding: 20px;
+  border: 1px solid #bcbcbc;
+}
+
+#modal.modal-overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(1.5px);
+  -webkit-backdrop-filter: blur(1.5px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+#modal .modal-window {
+  background: rgba(69, 139, 197, 0.70);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(13.5px);
+  -webkit-backdrop-filter: blur(13.5px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  width: 400px;
+  height: 500px;
+  position: relative;
+  top: -100px;
+  padding: 10px;
+}
+
+#modal .title {
+  padding-left: 10px;
+  display: inline;
+  text-shadow: 1px 1px 2px gray;
+  color: white;
+
+}
+
+#modal .title h2 {
+  display: inline;
+}
+
+#modal .close-area {
+  display: inline;
+  float: right;
+  padding-right: 10px;
+  cursor: pointer;
+  text-shadow: 1px 1px 2px gray;
+  color: white;
+}
+
+#modal .content {
+  margin-top: 20px;
+  padding: 0px 10px;
+  text-shadow: 1px 1px 2px gray;
+  color: white;
+}
+
+.map_search {
+  padding-left: 15px;
+  margin-top: 5px;
+}
+
+#map {
+  display: block;
+  margin: auto;
+  width: 550px;
+  height: 400px;
+  padding: 10px;
+}
+
+#jb-header {
+  padding: 20px;
+  margin-bottom: 20px;
+  border: 1px solid #bcbcbc;
+}
+
+#jb-content {
+  width: 580px;
+  padding: 2 0px;
+  margin-bottom: 20px;
+  float: left;
+  border: 1px solid #bcbcbc;
+}
+
+#jb-sidebar {
+  width: 260px;
+  height: 450px;
+  padding: 10px;
+  margin-bottom: 20px;
+  float: right;
+  border: 1px solid #bcbcbc;
+}
+
+#jb-footer {
+  clear: both;
+  padding: 20px;
+  border: 1px solid #bcbcbc;
+}

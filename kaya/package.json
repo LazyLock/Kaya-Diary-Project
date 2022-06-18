@@ -4,13 +4,18 @@
   "description": "kaya diary project",
   "main": "app.js",
   "scripts": {
-    "start" : "nodemon app"
+    "start": "nodemon app"
   },
   "author": "groovy",
   "license": "ISC",
   "dependencies": {
+    "axios": "^0.27.2",
+    "dotenv": "^16.0.1",
     "express": "^4.18.1",
-    "nunjucks": "^3.2.3"
+    "mysql2": "^2.3.3",
+    "nunjucks": "^3.2.3",
+    "sequelize": "^6.21.0",
+    "sequelize-cli": "^6.4.1"
   },
   "devDependencies": {
     "nodemon": "^2.0.16"
