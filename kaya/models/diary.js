@@ -5,7 +5,7 @@ module.exports = class Diary extends Sequelize.Model {
     return super.init(
       {
         date: {
-          type: Sequelize.DATE,
+          type: Sequelize.DATEONLY,
           allowNull: false,
         },
         category: {

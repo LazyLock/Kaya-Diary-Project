@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8">
+  <title>Kaya</title>
+  <link rel="stylesheet" href="/main2.css">
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+
+<body>
+  <div id="jb-container">
+    <div id="jb-header">
+      <h1>Kaya Diary Project</h1>
+    </div>
+    {% block content %}
+    {% endblock %}
+    
+    <section id="jb-sidebar">
+      <h2>다이어리 목록</h2>
+      <section class="diary_search">
+        <button class="sort_location">지역별</button>
+        <button class="sort_date">날짜별</button>
+        <article class="diary-list">다이어리 목록</article>
+        {% for diary in diarys %}
+        <div id="diary-list">
+          <span class="diary_list_title">
+            <span>{{diary.date}} : </span>
+            <span>{{diary.title}}</span>
+          </span>
+          <button class="diary_list_btn" ><a href="">보기</a></button>
+        </div>
+        {% endfor %}
+      </section>
+    </section>
+    <footer id="jb-footer">
+      <p>Copyright Groovy</p>
+    </footer>
+  </div>
+  <script type="text/javascript"
+    src="//dapi.kakao.com/v2/maps/sdk.js?appkey=9d2920e9898e2a4a8c8002ee3cd2ac29&libraries=services"></script>
+  <script src="/main.js"></script>
+  <script>
+
+  </script>
+</body>
+
+</html>

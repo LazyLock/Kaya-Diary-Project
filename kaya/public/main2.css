@@ -141,12 +141,35 @@ html {
 }
 
 #jb-sidebar {
-  width: 260px;
+  width: 300px;
   height: 450px;
   padding: 10px;
   margin-bottom: 20px;
   float: right;
   border: 1px solid #bcbcbc;
+}
+
+.diary_search {
+  height: 400px;
+  overflow: auto;
+}
+
+#diary-list {
+  border: solid 1px gray;
+  padding: 5px;
+  margin: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.diary_list_title {
+  width: 250px;
+}
+
+.diary_list_btn {
+  width: 50px;
+  height: 20px;
 }
 
 #jb-footer {

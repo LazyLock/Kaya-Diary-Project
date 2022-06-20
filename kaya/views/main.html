@@ -1,76 +1,40 @@
-<!doctype html>
-<html lang="ko">
+{% extends 'layout.html' %}
 
-<head>
-  <meta charset="utf-8">
-  <title>Kaya</title>
-  <link rel="stylesheet" href="/main2.css">
-  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-</head>
+{% block content %}
 
-<body>
-  <div id="jb-container">
-    <div id="jb-header">
-      <h1>Kaya Diary Project</h1>
+<div id="modal" class="modal-overlay">
+  <div class="modal-window">
+    <div class="title">
+      <h2>다이어리 작성하기</h2>
     </div>
+    <div class="close-area">X</div>
+    <div class="content">
+      <form action="/diary" method="post" id="diary-form">
+        <header id="diary-header">
+          <input type="date" id="diary-date" name="date" placeholder="날짜를 입력하세요">
+          <input type="text" id="diary-category" name="catego" placeholder="카테고리를 입력하세요">
+        </header>
+        <section id="diary-section">
+          <input type="text" id="diary-friends" name="friend" placeholder="같이 방문한 사람을 입력하세요">
+          <input typ
+          \e="text" id="diary-title" name="title" placeholder="제목을 입력해주세요">
+          <input type="text" id="diary-comment" name="comment" placeholder="코멘트를 남겨주세요">
+        </section>
+        <button id="diary-btn" type="submit">제출하기</button>
+      </form>
 
-    <div id="modal" class="modal-overlay">
-      <div class="modal-window">
-        <div class="title">
-          <h2>다이어리 작성하기</h2>
-        </div>
-        <div class="close-area">X</div>
-        <div class="content">
-          <form action="/diary" method="post" id="diary-form">
-            <header id="diary-header">
-              <input type="date" id="diary-date" name="date" placeholder="날짜를 입력하세요">
-              <input type="text" id="diary-category" name="catego" placeholder="카테고리를 입력하세요">
-            </header>
-            <section id="diary-section">
-              <input type="text" id="diary-friends" name="friend" placeholder="같이 방문한 사람을 입력하세요">
-              <input type="text" id="diary-title" name="title" placeholder="제목을 입력해주세요">
-              <input type="text" id="diary-comment" name="comment" placeholder="코멘트를 남겨주세요">
-            </section>
-            <button id="diary-btn" type="submit">제출하기</button>
-          </form>
-
-        </div>
-      </div>
     </div>
-
-    <section id="jb-content">
-      <article class="map_search">
-        <input type="text" placeholder="장소를 검색하세요" id="place_search">
-        <button id="search_button">검색</button>
-      </article>
-      <article class="map_map" id="map_map">
-        <div id="map"></div>
-      </article>
-    </section>
-    <section id="jb-sidebar">
-      <h2>다이어리 목록</h2>
-      <section class="diary_search">
-        <button class="sort_location">지역별</button>
-        <button class="sort_date">날짜별</button>
-        <article class="diary_list">다이어리 목록</article>
-        {% for diary in diarys %}
-          <div id="diary-list">
-            <span>{{diary.date}}</span>
-            <span>{{diary.title}}</span>
-          </div>
-        {% endfor %}
-      </section>
-    </section>
-    <footer id="jb-footer">
-      <p>Copyright Groovy</p>
-    </footer>
   </div>
-  <script type="text/javascript"
-    src="//dapi.kakao.com/v2/maps/sdk.js?appkey=9d2920e9898e2a4a8c8002ee3cd2ac29&libraries=services"></script>
-  <script src="/main.js"></script>
-  <script>
+</div>
 
-  </script>
-</body>
+<section id="jb-content">
+  <article class="map_search">
+    <input type="text" placeholder="장소를 검색하세요" id="place_search">
+    <button id="search_button">검색</button>
+  </article>
+  <article class="map_map" id="map_map">
+    <div id="map"></div>
+  </article>
+</section>
 
-</html>
+{% endblock %}
