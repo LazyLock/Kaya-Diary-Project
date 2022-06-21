@@ -114,30 +114,81 @@ html {
 }
 
 .map_search {
+  width: 300px;
   padding-left: 15px;
-  margin-top: 5px;
+  margin-bottom: 10px;
 }
 
 #map {
   display: block;
   margin: auto;
-  width: 550px;
+  width: 520px;
   height: 400px;
   padding: 10px;
 }
 
 #jb-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   padding: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   border: 1px solid #bcbcbc;
 }
 
+.header-icon i {
+  font-size: 25px;
+}
+
+a:link {
+  color: #513926;
+}
+
+a:visited {
+  color: #513926;
+}
+
+a:hover {
+  color: #7F593C;
+}
+
 #jb-content {
-  width: 580px;
-  padding: 2 0px;
-  margin-bottom: 20px;
+  width: 540px;
+  padding: 20px;
+  margin-bottom: 10px;
   float: left;
   border: 1px solid #bcbcbc;
+}
+
+.diary-box {
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid gray;
+}
+
+.diary-header, .diary-friends, .diary-content {
+  padding: 5px;
+  margin: 10px;
+}
+
+.diary-friends, .diary-content {
+  width: 480px;
+  border-top: 1px solid gray;
+}
+
+.diary-date {
+  margin-right: 20px;
+}
+
+.diary-btns {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.delete-btn, .modify-btn {
+  margin-left: 10px;
+  padding-top: 10px;
 }
 
 #jb-sidebar {

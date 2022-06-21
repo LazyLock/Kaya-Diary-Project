@@ -1,5 +1,21 @@
 {% extends 'layout.html' %}
 
+{% block content %}
 <section id="jb-content">
-  
+  <div class="diary-box">
+    <header class="diary-header">
+      <div class="diary-title">제목 : {{diary_selected.title}}</div>
+      <div class="date-cate">
+        <span class="diary-date">방문한 날짜 : {{diary_selected.date}}</span>
+        <span class="diary-cate">카테고리 : {{diary_selected.category}}</span>
+      </div>
+    </header>
+    <div class="diary-friends">함께 방문한 친구 : {{diary_selected.friends}}</div>
+    <div class="diary-content">{{diary_selected.comment}}</div>
+  </div>
+  <div class="diary-btns">
+    <a href="/delete" class="delete-btn"><button>삭제하기</button></a>
+    <a href="/modify" class="modify-btn"><button>수정하기</button></a>
+  </div>
 </section>
+{% endblock %}

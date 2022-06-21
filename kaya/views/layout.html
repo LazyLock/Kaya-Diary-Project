@@ -6,12 +6,14 @@
   <title>Kaya</title>
   <link rel="stylesheet" href="/main2.css">
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="https://kit.fontawesome.com/9c9e6780e3.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
   <div id="jb-container">
     <div id="jb-header">
       <h1>Kaya Diary Project</h1>
+      <a href="/" class='header-icon'><i class="fa-solid fa-house"></i></a>
     </div>
     {% block content %}
     {% endblock %}
@@ -23,12 +25,12 @@
         <button class="sort_date">날짜별</button>
         <article class="diary-list">다이어리 목록</article>
         {% for diary in diarys %}
-        <div id="diary-list">
+        <div id="diary-list" data-value="{{diary.id}}">
           <span class="diary_list_title">
             <span>{{diary.date}} : </span>
             <span>{{diary.title}}</span>
           </span>
-          <button class="diary_list_btn" ><a href="">보기</a></button>
+          <button class="diary_list_btn" ><a href="http://localhost:1202/diary/{{diary.id}}/detail">보기</a></button>
         </div>
         {% endfor %}
       </section>
