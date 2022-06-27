@@ -155,7 +155,7 @@ a:hover {
 #jb-content {
   width: 540px;
   padding: 20px;
-  margin-bottom: 10px;
+  margin: 0px;
   float: left;
   border: 1px solid #bcbcbc;
 }
@@ -172,16 +172,17 @@ a:hover {
   margin: 10px;
 }
 
+
 .diary-friends, .diary-content {
   width: 480px;
   border-top: 1px solid gray;
 }
 
-.diary-date {
+diary-date {
   margin-right: 20px;
 }
 
-.diary-btns {
+.diary-btns, .modify-btn {
   display: flex;
   flex-direction: row-reverse;
 }
@@ -189,6 +190,46 @@ a:hover {
 .delete-btn, .modify-btn {
   margin-left: 10px;
   padding-top: 10px;
+}
+
+
+.modi-diary-box {
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid gray;
+}
+
+.modi-diary-header {
+  margin: 10px;
+}
+
+.modi-diary-title {
+  width: 250px;
+}
+
+.modi-date-cate {
+  margin-right: 10px;
+}
+
+.modi-diary-friends, .modi-diary-content {
+  width: 480px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+}
+
+.modi-diary-content {
+  height: 200px;
+}
+
+.modi-modify-btn {
+  width: 60px;
+  font-size: small;
+  height: 20px;
+  display: flex;
+  flex-direction: row-reverse;
+  padding: 0px;
+  margin-right: 0px;
 }
 
 #jb-sidebar {

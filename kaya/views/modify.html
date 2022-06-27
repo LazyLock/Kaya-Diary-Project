@@ -1,0 +1,21 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<section id="jb-content">
+  <form action="/complete/{{diary_selected.id}}" method="post" class="diary-btns" id="modi-form">
+    <div class="modi-diary-box" data-diaryID="{{diary_selected.id}}">
+      <span type="hidden" name="id" value="{{diary_selected.id}}"></span>
+      <header class="modi-diary-header">
+        <input class="modi-diary-title" placeholder="제목 : {{diary_selected.title}}" name="title"></input>
+        <div class="modi-date-cate">
+          <input class="modi-diary-date" placeholder="방문한 날짜 : {{diary_selected.date}}" name="date"></input>
+          <input class="modi-diary-cate" placeholder="카테고리 : {{diary_selected.category}}" name="cate"></input>
+        </div>
+      </header>
+      <input class="modi-diary-friends" placeholder="함께 방문한 친구 : {{diary_selected.friends}}" name="friends"></input>
+      <input class="modi-diary-content" placeholder="{{diary_selected.comment}}" name="comment"></input>
+    </div>
+  </form>
+  <button type="submit" form="modi-form" class="modi-modify-btn">완료하기</button>
+</section>
+{% endblock %}
