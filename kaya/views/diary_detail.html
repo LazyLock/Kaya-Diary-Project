@@ -14,8 +14,25 @@
     <div class="diary-content">{{diary_selected.comment}}</div>
   </div>
   <div class="diary-btns">
-    <a href="/delete" class="delete-btn"><button>삭제하기</button></a>
+    <button class="delete-btn" id="event-delete-btn">삭제하기</button>
     <a href="http://localhost:1202/modify/{{diary_selected.id}}" class="modify-btn"><button>수정하기</button></a>
   </div>
+  <input type="hidden" id="diary_id" value="{{diary_selected.id}}">
 </section>
+{% endblock %}
+
+{% block script %}
+<script>
+  const id = document.getElementById("diary_id").value;
+  const deleteBtn = document.getElementById("event-delete-btn");
+  deleteBtn.addEventListener('click', (e) => {
+    const result = window.confirm('정말로 삭제하시겠습니까?');
+    if (result) {
+      location.href = "http://localhost:1202/delete/" + id
+    } else {
+      location.reload();
+    }
+  })
+</script>
+
 {% endblock %}

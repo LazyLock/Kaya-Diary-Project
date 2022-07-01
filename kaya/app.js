@@ -9,7 +9,7 @@ dotenv.config();
 const indexRouter = require("./routes");
 const diaryRouter = require("./routes/diary");
 const modifyRouter = require("./routes/modify");
-const completeRouter = require("./routes/complete");
+const deleteRouter = require("./routes/delete");
 
 const app = express();
 app.set("view engine", "html");
@@ -32,7 +32,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use("/", indexRouter);
 app.use("/diary", diaryRouter);
 app.use("/modify", modifyRouter);
-app.use("/complete", completeRouter);
+app.use("/delete", deleteRouter);
 
 app.use((req, res, next) => {
   const error = new Error(`${req.method} ${req.url} 라우터가 없습니다.`);
