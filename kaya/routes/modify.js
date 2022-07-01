@@ -16,8 +16,9 @@ router.get("/:id", async (req, res, next) => {
   }
 });
 
-router.route("/:id/complete").patch(async (req, res, next) => {
-  const { id, date, catego, friend, title, comment } = req.body;
+router.post("/:id/complete", async (req, res, next) => {
+  const { date, catego, friend, title, comment } = req.body;
+  const id = req.params.id;
   try {
     await Diary.update(
       {
@@ -29,11 +30,31 @@ router.route("/:id/complete").patch(async (req, res, next) => {
       },
       { where: { id: id } }
     );
-    res.redirect("/diary/id/detail");
+    res.redirect("/diary/" + id + "/detail");
   } catch (err) {
     console.error(err);
     next(err);
   }
 });
+
+// router.route("/:id/complete").patch(async (req, res, next) => {
+//   const { id, date, catego, friend, title, comment } = req.body;
+//   try {
+//     await Diary.update(
+//       {
+//         date: date,
+//         category: catego,
+//         friends: friend,
+//         title: title,
+//         comment: comment,
+//       },
+//       { where: { id: id } }
+//     );
+//     res.redirect("/diary/id/detail");
+//   } catch (err) {
+//     console.error(err);
+//     next(err);
+//   }
+// });
 
 module.exports = router;

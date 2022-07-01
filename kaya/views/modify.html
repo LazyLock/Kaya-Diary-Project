@@ -1,21 +1,26 @@
+<!-- 현재 주소는 localhost:1202/modify/:id-->
+
 {% extends 'layout.html' %}
 
 {% block content %}
-<section id="jb-content">
-  <form action="/complete/{{diary_selected.id}}" method="post" class="diary-btns" id="modi-form">
-    <div class="modi-diary-box" data-diaryID="{{diary_selected.id}}">
-      <span type="hidden" name="id" value="{{diary_selected.id}}"></span>
+<form action="/modify/{{diary_selected.id}}/complete" class="diary-modify-form" method="post">
+  <section id="jb-content">
+    <div class="modi-diary-box">
       <header class="modi-diary-header">
-        <input class="modi-diary-title" placeholder="제목 : {{diary_selected.title}}" name="title"></input>
+        <input class="modi-diary-title" type="text" value="{{diary_selected.title}}" name="title">
         <div class="modi-date-cate">
-          <input class="modi-diary-date" placeholder="방문한 날짜 : {{diary_selected.date}}" name="date"></input>
-          <input class="modi-diary-cate" placeholder="카테고리 : {{diary_selected.category}}" name="cate"></input>
+          <input type="date" class="modi-diary-date" value="{{diary_selected.date}}" name="date">
+          <input type="text" class="modi-diary-cate" value="{{diary_selected.category}}" name="catego">
         </div>
       </header>
-      <input class="modi-diary-friends" placeholder="함께 방문한 친구 : {{diary_selected.friends}}" name="friends"></input>
-      <input class="modi-diary-content" placeholder="{{diary_selected.comment}}" name="comment"></input>
+      <div class="modi-line"></div>
+      <input type="text" class="modi-diary-friends" value="{{diary_selected.friends}}" name="friend">
+      <div class="modi-line"></div>
+      <input type="text" class="modi-diary-content" value="{{diary_selected.comment}}" name="comment">
     </div>
-  </form>
-  <button type="submit" form="modi-form" class="modi-modify-btn">완료하기</button>
-</section>
+    <div class="diary-btns">
+      <button id="modify-btn" type="submit" class="modi-modify-btn">완료하기</button>  
+    </div>
+  </section>
+</form>
 {% endblock %}

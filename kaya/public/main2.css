@@ -160,7 +160,7 @@ a:hover {
   border: 1px solid #bcbcbc;
 }
 
-.diary-box {
+.diary-box, .modi-diary-box {
   height: 350px;
   display: flex;
   flex-direction: column;
@@ -172,13 +172,57 @@ a:hover {
   margin: 10px;
 }
 
+.modi-diary-header, .modi-diary-friends, .modi-diary-content {
+  margin: 10px;
+}
+
+.modi-diary-title, .modi-diary-date, .modi-diary-cate {
+  width: 150px;
+  margin-right: 10px;
+}
+
+.modi-diary-title {
+  margin-bottom: 10px;
+}
+
+.modi-date-cate {
+  display: flex;
+}
+
+.modi-diary-date {
+  margin-right: 30px;
+}
+
+.modi-line {
+  text-align: center;
+  margin-top: 10px;
+  width: 500px;
+  height: 10px;
+  margin: 0px;
+  padding: 0px;
+  border-top: 1px solid gray;
+}
+
+.modi-diary-friends {
+  width: 320px;
+  height: 30px;
+}
+
+.modi-diary-content {
+  width: 420px;
+  height: 150px;
+}
+
+.modi-modify-btn {
+  margin-top: 10px;
+}
 
 .diary-friends, .diary-content {
   width: 480px;
   border-top: 1px solid gray;
 }
 
-diary-date {
+.diary-date {
   margin-right: 20px;
 }
 
@@ -193,44 +237,6 @@ diary-date {
 }
 
 
-.modi-diary-box {
-  height: 350px;
-  display: flex;
-  flex-direction: column;
-  border: 1px solid gray;
-}
-
-.modi-diary-header {
-  margin: 10px;
-}
-
-.modi-diary-title {
-  width: 250px;
-}
-
-.modi-date-cate {
-  margin-right: 10px;
-}
-
-.modi-diary-friends, .modi-diary-content {
-  width: 480px;
-  margin-bottom: 10px;
-  margin-left: 10px;
-}
-
-.modi-diary-content {
-  height: 200px;
-}
-
-.modi-modify-btn {
-  width: 60px;
-  font-size: small;
-  height: 20px;
-  display: flex;
-  flex-direction: row-reverse;
-  padding: 0px;
-  margin-right: 0px;
-}
 
 #jb-sidebar {
   width: 300px;
