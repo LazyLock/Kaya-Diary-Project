@@ -4,11 +4,9 @@
 
 ### Node.js와 Open API를 결합하여 js로 구성된 독자적인 웹사이트를 구현한다.
 
-## 결과 및 인사이트
+## 결과물
 
-### 1. Express를 통해 페이지별 전환 및 라우터의 개념과 REST API에 대해 명확히 이해했다.
-
-### 2. Node.js가 전체적으로 돌아가는 구조를 통해 웹사이트가 돌아가는 원리를 체계화하였다.
+<img src="https://github.com/user-attachments/assets/13199d8b-bba1-4058-9598-c9d3a37959eb">
 
 # 코드 분석
 
